@@ -3,6 +3,7 @@ import {
   ComboBoxItem,
   ComboBoxDomRef,
 } from "@ui5/webcomponents-react";
+import pkgJson from "@ui5/webcomponents-react/package.json";
 
 import { useEffect, useRef } from "react";
 
@@ -32,6 +33,8 @@ function App() {
 
   return (
     <>
+      UI5WCR Version: {pkgJson.version}
+      <br />
       {/*w/o ui5 wcr wrapper*/}
       <ui5-combobox ref={cbRef} value="ComboBox Entry 1">
         <ui5-cb-item text="ComboBox Entry 1" />
